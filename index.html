@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Seaweed+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>my website</title>
+    <style>
+
+
+        @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+
+        }
+
+        @keyframes color {
+        0% {
+            filter: saturate(0%);
+            background-color: rgb(256, 256, 256, 0.5);
+            transform: scale(1);
+        }
+        100% {
+            filter: saturate(100%);
+            background-color: rgb(256, 256, 256, 1);
+            transform: scale(1.05);
+        }
+   
+        }
+        body {
+            margin: 0px;
+            padding: 0px;         
+        }
+        p {
+            font-family: 'Roboto';
+            font-weight: 300
+        }
+
+        a {
+            text-decoration: none;
+        }
+        h1, h3 {
+            font-family: 'Roboto Slab';
+        }
+
+        h1:hover, h3:hover {
+            color: orangered;
+            cursor: pointer;
+        }
+        .Header {
+            background-color: rgb(255, 136, 45);
+            padding: 10px;
+            gap: 15px;
+            display: flex;
+            height: 30vh;
+        }
+
+        .Header #image-content {
+            flex: 0.5;
+            position: relative;
+        }
+        
+        .Header #image-content > #main-photo {
+            width: 200px;
+            border-radius: 300px;
+            animation: spin 60s linear infinite;
+        }
+
+        .Header #image-content > #shark{
+            position: absolute;
+            width: 50px;
+            left: 0px;
+            bottom: -20px
+        }
+
+        .Header #text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+   
+    
+
+        .Socials {
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-left: 15px;
+            grid-template-columns: 0.75fr 0.75fr 0.75fr;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .Socials > a {
+            position: relative;
+            width: 95%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 0.30fr 0.70fr;
+            align-items: center;
+            border-radius: 25px;
+            border: 2px solid black;
+            filter: saturate(0%);
+            background-color: rgb(256, 256, 256, 0.5);
+        }
+        
+        .Socials > a:hover {
+            animation: color 0.8s forwards;
+            cursor: pointer;
+        }
+
+        .Socials > a > * {
+            height:100%;
+            border-radius: 25px;
+        }
+
+        .Socials > a > :nth-child(1) {    
+            background-color: red;
+        }
+        
+        .Socials > a > :nth-child(1) img {    
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 20px;
+        }
+        
+        .Socials > a > :nth-child(2) { 
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .Socials > a > :nth-child(2) > p{ 
+            padding: 5px;
+        }
+
+        .Socials > a #smaller-icon {
+            width: 40px; 
+            height: 40px;
+            position: absolute;
+            bottom: -10px;
+            left: -120px;
+        }
+
+        #spotify-toone {
+            display: flex;
+            align-items: center;
+            width: 200px; 
+            height: 50px; 
+            background: rgb(0, 0, 0);
+            top: 0px;
+            right: 0px;
+            position: absolute;
+        }
+        #spotify-toone > *:nth-child(1) {
+            position: relative;
+            height: 100%;
+            background-image: url("/img/song.jpg");
+            background-size: cover;
+            flex: 0.25;
+        }
+
+        #spotify-toone > *:nth-child(1) #lil-disk {
+            flex: 0.2;
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            width: 20px;
+        }
+        #spotify-toone > *:nth-child(2) {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: black;
+            color: white;
+            height: 100%;
+            flex: 0.8;
+        }
+        
+        #spotify-toone > *:nth-child(2)  h3 {
+            margin-left: 5px;
+            font-size: 14.5px;
+        }
+
+        #spotify-toone > *:nth-child(2) p  {
+            font-size: 13px;
+        }
+
+        .Footer {
+            flex: 1;
+            gap: 0px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 20vh;
+            background: red;
+            overflow: hidden;
+        }
+
+        .Footer > img{ 
+            width: 100%;
+            opacity: 20px;
+        }
+
+        .Footer > h1 {
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            letter-spacing: 20px;
+            color: white;
+            font-family: "Seaweed Script", cursive;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class = "Header">
+        <div id = "image-content">
+            <img id = "main-photo" src = "/img/icon.jpg" alt = "main-icon">
+            <img src = "/img/cute-shark-gif.gif" id = "shark">
+        </div>
+        <div id = "text-content">
+            <h1>mrlvision's website</h1>
+            <p> yello! my name's mrl, i am independent video editor and a noob in video games. you can check a few of my socials down below where i'll be posting my stuff. enjoy, i guess?</p>
+        </div>
+    </div>
+    <hr>
+    <h3 style = "margin-left: 10px;"> My socials</h3>
+    <div class = "Socials">
+        <a href = "https://www.instagram.com/mrlvision2/">
+            <div>
+                <img src = "/img/insta-app-icon.jpg" alt = "#">
+            </div>
+            <div>
+                <h2> mrlvision insta </h2>
+                <p> this is my editing diary. i edit stuff i love, stuff i loved watching or whatever i'm feeling. </p>
+                <img src = "/img/insta.png" id = "smaller-icon"> 
+            </div>
+        </a>
+        <a href = "https://www.youtube.com/@mrlvision">
+            <div>
+                <img src = "/img/youtube2-app-icon.jpg" alt = "#">
+            </div>
+            <div>
+                <h2> mrlvision yt page </h2>
+                <p> this is my yt editing page, here i post longer videos,, experimental and wackier stuff. </p>
+                <img src = "/img/youtube.jpg" id = "smaller-icon"> 
+            </div>
+        </a>
+        <a href = "https://www.youtube.com/@mrlgamer-x4v">
+            <div>
+                <img src = "/img/youtube-app-icon.jpg" alt = "#">
+            </div>
+            <div>
+                <h2> mrlvision gameplay page </h2>
+                <p> this is my gameplay page! here i'll be posting some gamethroughs i do on ps5 and pc, mostly sims. </p>
+                <img src = "/img/youtube.jpg" id = "smaller-icon"> 
+            </div>
+        </a>
+        
+    </div>
+    <div id = "spotify-toone">
+        <div class = "img-space">
+            <img id = "lil-disk" src = "/img/disc.gif">
+        </div>
+        <div id = "song">
+            <h3>Clouds Up</h3>
+            <p>Air</p>
+        </div>
+    </div>
+
+    <div class = "Footer">
+        <h1> This is my spot!</h1>
+        <img src = "/img/margot-dance.gif">
+    </div>
+    <script>
+
+        function globalAudio() {
+            let audio = new Audio("/audio/clouds up.mp3")
+            audio.volume = 0.35
+            audio.play()
+        }
+
+        function getUISound() {
+            ui = [new Audio("/audio/a1.wav"),
+            new Audio("/audio/a2.wav"), new Audio("/audio/a3.wav"), new Audio("/audio/a4.wav"), new Audio("/audio/a5.wav")
+            ]
+            getOne = Math.floor(Math.random() * 5)
+            return ui[getOne]
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            globalAudio()
+
+            const a = document.querySelectorAll("a")
+
+            a.forEach((littleA) => {
+                littleA.addEventListener("mouseenter", () => {
+                    let audio = getUISound()
+                    audio.play()
+                })
+            })
+        })
+    </script>
+</body>
+</html>
