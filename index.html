@@ -171,7 +171,7 @@
         #spotify-toone > *:nth-child(1) {
             position: relative;
             height: 100%;
-            background-image: url("/img/song.jpg");
+            background-image: url("img/song.jpg");
             background-size: cover;
             flex: 0.25;
         }
@@ -236,8 +236,8 @@
 <body>
     <div class = "Header">
         <div id = "image-content">
-            <img id = "main-photo" src = "/img/icon.jpg" alt = "main-icon">
-            <img src = "/img/cute-shark-gif.gif" id = "shark">
+            <img id = "main-photo" src = "img/icon.jpg" alt = "main-icon">
+            <img src = "img/cute-shark-gif.gif" id = "shark">
         </div>
         <div id = "text-content">
             <h1>mrlvision's website</h1>
@@ -249,39 +249,39 @@
     <div class = "Socials">
         <a href = "https://www.instagram.com/mrlvision2/">
             <div>
-                <img src = "/img/insta-app-icon.jpg" alt = "#">
+                <img src = "img/insta-app-icon.jpg" alt = "#">
             </div>
             <div>
                 <h2> mrlvision insta </h2>
                 <p> this is my editing diary. i edit stuff i love, stuff i loved watching or whatever i'm feeling. </p>
-                <img src = "/img/insta.png" id = "smaller-icon"> 
+                <img src = "img/insta.png" id = "smaller-icon"> 
             </div>
         </a>
         <a href = "https://www.youtube.com/@mrlvision">
             <div>
-                <img src = "/img/youtube2-app-icon.jpg" alt = "#">
+                <img src = "img/youtube2-app-icon.jpg" alt = "#">
             </div>
             <div>
                 <h2> mrlvision yt page </h2>
                 <p> this is my yt editing page, here i post longer videos,, experimental and wackier stuff. </p>
-                <img src = "/img/youtube.jpg" id = "smaller-icon"> 
+                <img src = "img/youtube.jpg" id = "smaller-icon"> 
             </div>
         </a>
         <a href = "https://www.youtube.com/@mrlgamer-x4v">
             <div>
-                <img src = "/img/youtube-app-icon.jpg" alt = "#">
+                <img src = "img/youtube-app-icon.jpg" alt = "#">
             </div>
             <div>
                 <h2> mrlvision gameplay page </h2>
                 <p> this is my gameplay page! here i'll be posting some gamethroughs i do on ps5 and pc, mostly sims. </p>
-                <img src = "/img/youtube.jpg" id = "smaller-icon"> 
+                <img src = "img/youtube.jpg" id = "smaller-icon"> 
             </div>
         </a>
         
     </div>
     <div id = "spotify-toone">
         <div class = "img-space">
-            <img id = "lil-disk" src = "/img/disc.gif">
+            <img id = "lil-disk" src = "img/disc.gif">
         </div>
         <div id = "song">
             <h3>Clouds Up</h3>
@@ -291,19 +291,19 @@
 
     <div class = "Footer">
         <h1> This is my spot!</h1>
-        <img src = "/img/margot-dance.gif">
+        <img src = "img/margot-dance.gif">
     </div>
     <script>
 
         function globalAudio() {
-            let audio = new Audio("/audio/clouds up.mp3")
+            let audio = new Audio("audio/clouds up.mp3")
             audio.volume = 0.35
             audio.play()
         }
 
         function getUISound() {
-            ui = [new Audio("/audio/a1.wav"),
-            new Audio("/audio/a2.wav"), new Audio("/audio/a3.wav"), new Audio("/audio/a4.wav"), new Audio("/audio/a5.wav")
+            ui = [new Audio("audio/a1.wav"),
+            new Audio("audio/a2.wav"), new Audio("audio/a3.wav"), new Audio("audio/a4.wav"), new Audio("audio/a5.wav")
             ]
             getOne = Math.floor(Math.random() * 5)
             return ui[getOne]
